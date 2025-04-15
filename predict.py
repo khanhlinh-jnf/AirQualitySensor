@@ -15,8 +15,8 @@ if choice < 0 or choice >= len(model_name):
 	exit()
  
 if choice < 6:
-	model_ozone = joblib.load(f"linear_models/{model_name[choice]}_ozone.pkl")
-	model_no2 = joblib.load(f"linear_models/{model_name[choice]}_no2.pkl")
+	model_ozone = joblib.load(f"models/linear_models/{model_name[choice]}_ozone.pkl")
+	model_no2 = joblib.load(f"models/linear_models/{model_name[choice]}_no2.pkl")
 
 	print()
 	o3op1 = float(input("o3op1: "))
@@ -32,10 +32,10 @@ if choice < 6:
 	print(f"Predicted NO2: {predict_no2[0]:.4f}")
  
 else:
-	model_ozone = joblib.load(f"advance_models/{model_name[choice]}_ozone.pkl")
-	model_no2 = joblib.load(f"advance_models/{model_name[choice]}_no2.pkl")
-	scaler = joblib.load("advance_models/scaler_task2.pkl")
-	features = joblib.load("advance_models/features.pkl") 
+	model_ozone = joblib.load(f"models/advance_models/{model_name[choice]}_ozone.pkl")
+	model_no2 = joblib.load(f"models/advance_models/{model_name[choice]}_no2.pkl")
+	scaler = joblib.load("models/advance_models/scaler_task2.pkl")
+	features = joblib.load("models/advance_models/features.pkl") 
 	print()
 	o3op1 = float(input("o3op1: "))
 	o3op2 = float(input("o3op2: "))

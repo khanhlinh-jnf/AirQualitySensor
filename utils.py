@@ -3,9 +3,10 @@ import joblib
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
 import numpy as np
+
 df_test = pd.read_csv("data/dummy_test.csv")
 
-model_dir = "linear_models"
+model_dir = "models/linear_models"
 df_test = pd.read_csv("data/dummy_test.csv")
 targets = ["OZONE", "NO2"]
 
@@ -17,9 +18,9 @@ results = []
 for target in targets:
     y_test = df_test[target]
 
-    for file in os.listdir("linear_models"):
+    for file in os.listdir("models/linear_models"):
         if file.endswith(f"{target.lower()}.pkl"):
-            model_path = os.path.join("linear_models", file)
+            model_path = os.path.join("models/linear_models", file)
             model_name = file.replace(f"_{target.lower()}.pkl", "")
 
             model = joblib.load(model_path)
@@ -34,7 +35,7 @@ for target in targets:
             results.append(result)
 
 result_df = pd.DataFrame(results)
-result_df.to_csv("linear_models/results_on_test.csv", index=False)
+result_df.to_csv("models/linear_models/results_on_test.csv", index=False)
 
 if 'Time' in df_test.columns:
     df_test['Time'] = pd.to_datetime(df_test['Time'])
@@ -45,16 +46,16 @@ if 'Time' in df_test.columns:
 features = [col for col in df_test.columns if col not in ['OZONE', 'NO2', 'Time', 'hour']]
 X_test = df_test[features]
 
-scaler = joblib.load("advance_models/scaler_task2.pkl")
+scaler = joblib.load("models/advance_models/scaler_task2.pkl")
 X_test_scaled = scaler.transform(X_test)
 rows = []
 
 for target in targets:
     y_test = df_test[target]
 
-    for file in os.listdir("advance_models"):
+    for file in os.listdir("models/advance_models"):
         if file.endswith(f"{target.lower()}.pkl"):
-            model_path = os.path.join("advance_models", file)
+            model_path = os.path.join("models/advance_models", file)
             model_name = file.replace(f"_{target.lower()}.pkl", "")
 
             model = joblib.load(model_path)
@@ -70,5 +71,5 @@ for target in targets:
 
 result_df = pd.DataFrame(rows)
 result_df = result_df.sort_values(by=["Target", "MAE"])
-result_df.to_csv("advance_models/results_on_test.csv", index=False)
+result_df.to_csv("models/advance_models/results_on_test.csv", index=False)
 

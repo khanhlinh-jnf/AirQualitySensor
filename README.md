@@ -8,8 +8,7 @@ pip install -r requirements.txt
 ```
 2. Run the code using the command below:
 ```bash
-python linear_model.py
-python advanced_model.py
+python train.py
 python utils.py
 python predict.py
 ```
