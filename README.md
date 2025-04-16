@@ -2,27 +2,27 @@
 
 # 💖 How to run code
 
-1.  Install the required libraries using the command below:
+## 1.  Install the required libraries using the command below:
 ```bash
 pip install -r requirements.txt
 ```
-2. Run the code using the command below:
+## 2. Run the code using the command below:
 
-To train linear and non-linear models
+### To train linear and non-linear models
 ```bash
 python train.py
 ```
-To run the models on the test set.
+### To run the models on the test set.
 ```bash
 python utils.py
 ```
-Input parameters from the keyboard for prediction.
+### Input parameters from the keyboard for prediction.
 ```bash
 python predict.py
 ```
-3. Choose the model you want to run from the list of available models in the code.
+## 3. Choose the model you want to run from the list of available models in the code.
 
-4. Input the required parameters when prompted. The code will then run the selected model and display the results.
+## 4. Input the required parameters when prompted. The code will then run the selected model and display the results.
 
 # Project Structure
 ```
