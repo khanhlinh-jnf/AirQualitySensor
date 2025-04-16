@@ -1,0 +1,11 @@
+model,target,mae
+DecisionTree-maxdepth3,OZONE,8.419077022776287
+DecisionTree-maxdepth5,OZONE,7.137118862717624
+DecisionTree-maxdepth11,OZONE,3.5098122568196413
+DecisionTree-maxdepth17,OZONE,1.2620994293412482
+DecisionTree-maxdepthNone,OZONE,0.029801233333333333
+DecisionTree-maxdepth3,NO2,6.634600036446733
+DecisionTree-maxdepth5,NO2,5.430158243007276
+DecisionTree-maxdepth11,NO2,2.3280276180398074
+DecisionTree-maxdepth17,NO2,0.589735380683889
+DecisionTree-maxdepthNone,NO2,0.024603683333333334

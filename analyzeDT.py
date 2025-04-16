@@ -41,7 +41,10 @@ for target in targets:
 		model.fit(X_scaled, y)
 		y_pred = model.predict(X_scaled)
 		mae = mean_absolute_error(y, y_pred)
-		print(f"{name} - MAE = {mae:.4f}")
+		if name != "DecisionTree-maxdepthNone":
+			print(f"{name} - MAE = {mae:.4f}")
+		else:
+			print(f"DecisionTree - MAE = {mae:.4f} with max_depth {model.tree_.max_depth}")
 
 		joblib.dump(model, f"models/decision_tree_models/{name}_{target.lower()}.pkl")
 		rows.append({"model": name, "target": target, "mae": mae})
