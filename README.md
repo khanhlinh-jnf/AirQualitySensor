@@ -30,7 +30,7 @@ AirQualitySensor/
 ├── data/
 │   ├── dummy_test.csv                   # Dummy test data for model evaluation
 │   └── train.csv                        # Training data for model development
-├── models/								 # Directory for storing trained models
+├── models/                              # Directory for storing trained models
 │   ├── linear_models/                   # Directory for linear models
 │   ├── advanced_models/                 # Directory for advanced models
 │   └── decision_tree_models/            # Directory for decision tree models with each max_depth
