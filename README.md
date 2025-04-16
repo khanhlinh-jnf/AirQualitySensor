@@ -16,7 +16,7 @@ python train.py
 ```bash
 python utils.py
 ```
-### Input parameters from the keyboard for prediction.
+### Input parameters from the keyboard for prediction with final model.
 ```bash
 python predict.py
 ```
@@ -30,9 +30,10 @@ AirQualitySensor/
 ├── data/
 │   ├── dummy_test.csv                   # Dummy test data for model evaluation
 │   └── train.csv                        # Training data for model development
-├── models_pycache/
-│   ├── advance_model.cpython-313.pyc    # Compiled bytecode for advance_model.py
-│   └── linear_model.cpython-313.pyc     # Compiled bytecode for linear_model.py
+├── models/								 # Directory for storing trained models
+│   ├── linear_models/                   # Directory for linear models
+│   ├── advanced_models/                 # Directory for advanced models
+│   └── decision_tree_models/            # Directory for decision tree models with each max_depth
 ├── advance_model.py                     # Script for advanced model implementation
 ├── analyzeDT.py                         # Analyze the DecisionTree model.
 ├── linear_model.py                      # Script for linear model implementation
@@ -42,3 +43,6 @@ AirQualitySensor/
 ├── train.py                             # Script for training models
 └── utils.py                             # Script for running models on the test set
 ```
+### Note
+- After running the code, the trained models will be saved in the `models/` directory. You can load these models on Google Drive at link [here](https://drive.google.com/drive/u/1/folders/1nMeRZxAm8O-InNP7UvCb0tsuvo7ii0ym?fbclid=IwY2xjawJsqNhleHRuA2FlbQIxMAABHq1jUhRKirHKiB-v_hXWifXtYLMeJeTzzNSWILs3enULqM_eAclUijvJINn0_aem_3yZdkM9mTUZxqzNfE1E-sg) for use.
+- In each folder after run `train.py` and `utils.py`, will have results_summary.csv and results_on_test.csv files. These files contain the results of MAE of each model.

@@ -6,7 +6,10 @@ model_name = ["LinearRegression", "Ridge", "Lasso", "ElasticNet", "HuberRegresso
 
 print("Choose model: ")
 for i in range(len(model_name)):
-	print(f"{i}: {model_name[i]}")
+    if model_name[i] == "ExtraTrees":
+        print(f"{i}: {model_name[i]} (Best Model)")
+    else:
+        print(f"{i}: {model_name[i]}")
   
 choice = int(input("Enter your choice: "))
 
