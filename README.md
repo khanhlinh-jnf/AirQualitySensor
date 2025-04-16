@@ -24,7 +24,7 @@ python predict.py
 
 4. Input the required parameters when prompted. The code will then run the selected model and display the results.
 
-## Project Structure
+# Project Structure
 ```
 AirQualitySensor/
 ├── data/
