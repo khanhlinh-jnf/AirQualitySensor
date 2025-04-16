@@ -7,9 +7,17 @@
 pip install -r requirements.txt
 ```
 2. Run the code using the command below:
+
+To train linear and non-linear models
 ```bash
 python train.py
+```
+To run the models on the test set.
+```bash
 python utils.py
+```
+Input parameters from the keyboard for prediction.
+```bash
 python predict.py
 ```
 3. Choose the model you want to run from the list of available models in the code.
@@ -26,10 +34,11 @@ AirQualitySensor/
 │   ├── advance_model.cpython-313.pyc    # Compiled bytecode for advance_model.py
 │   └── linear_model.cpython-313.pyc     # Compiled bytecode for linear_model.py
 ├── advance_model.py                     # Script for advanced model implementation
+├── analyzeDT.py                         # Analyze the DecisionTree model.
 ├── linear_model.py                      # Script for linear model implementation
 ├── predict.py                           # Script for making predictions
 ├── README.md                            
 ├── requirements.txt                     # List of required Python libraries
 ├── train.py                             # Script for training models
-└── utils.py                             # Utility functions for the project
+└── utils.py                             # Script for running models on the test set
 ```
